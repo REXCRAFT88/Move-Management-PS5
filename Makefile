@@ -21,6 +21,12 @@ $(BUILD)/test_aim_setup: tests/test_aim_setup.cpp src/aim_setup.cpp src/aim_setu
 
 all: test
 
+$(BUILD)/test_hci_external: src/hci_external.c src/evstream.c src/log.c src/util.c tests/test_hci_external.c tests/mocks/libusb.h | $(BUILD)
+	$(CC) $(HOST_CFLAGS) -Wno-misleading-indentation -DEXTERNAL_BT_TEST -Itests/mocks -o $@ src/hci_external.c src/evstream.c src/log.c src/util.c tests/test_hci_external.c -ldl
+
+$(BUILD)/test_external_registration: tests/test_external_registration.c src/usb_register.c src/log.c src/util.c tests/mocks/libusb.h | $(BUILD)
+	$(CC) $(HOST_CFLAGS) -Wno-misleading-indentation -Itests/mocks -o $@ tests/test_external_registration.c src/log.c src/util.c -ldl -pthread
+
 $(BUILD):
 	@mkdir -p $(BUILD)
 

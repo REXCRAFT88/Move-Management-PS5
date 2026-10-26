@@ -1,0 +1,3 @@
+[submodule "camera/vendor/libuvc"]
+	path = camera/vendor/libuvc
+	url = https://github.com/libuvc/libuvc.git

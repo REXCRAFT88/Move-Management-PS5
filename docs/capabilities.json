@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "snapshot": "beta6.12",
+  "date": "2026-10-26",
+  "players": 4,
+  "physical_slots": 8,
+  "internal_radio_eight_links_verified": false,
+  "native_dualsense_reconnect": "known_failure",
+  "move_trigger_wii_b": "user_confirmed",
+  "ps3eye_tracking": "user_confirmed_with_false_positives",
+  "phone_mjpeg": "real_phone_connected_long_session_validation_pending",
+  "uvc_real_stream": "not_verified",
+  "virtual_dualsense": "normal_build_guarded_external_beta_device_lifecycle_verified_input_pending",
+  "virtual_move": "not_implemented",
+  "virtual_access_controller": "not_implemented",
+  "dualshock3_input": "research_only",
+  "ps2_usb_converter_input": "research_only",
+  "standalone_app_tile": "not_working",
+  "rpcs3_integration": "plan_only",
+  "vibration_feedback_receive": "not_implemented",
+  "protocol": {
+    "input_version": 2,
+    "input_bytes": 184,
+    "primary_move_ports": [
+      9976,
+      9977,
+      9978,
+      9979
+    ],
+    "nav_ports": [
+      9980,
+      9981,
+      9982,
+      9983
+    ],
+    "second_move_ports": [
+      10000,
+      10001,
+      10002,
+      10003
+    ],
+    "input_timeout_ms": 500,
+    "optical_timeout_ms": 200
+  },
+  "screen_aiming": "standalone_wizard_preview_and_saved_geometry_synthetic_tests_pass_hardware_pending",
+  "gyro_calibration": "session_zeroing_synthetic_tests_pass_hardware_pending"
+}

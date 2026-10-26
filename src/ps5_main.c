@@ -40,8 +40,8 @@
 #include "players.h"
 #include "usb_register.h"
 #include <dirent.h>
-#include "porpoise_move.h"
-#include "porpoise_nav.h"
+#include "move_bridge.h"
+#include "nav_bridge.h"
 #include "lock.h"
 #include "log.h"
 #include "netinfo.h"

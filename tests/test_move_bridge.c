@@ -1,4 +1,4 @@
-#include "porpoise_move.h"
+#include "move_bridge.h"
 
 #include <arpa/inet.h>
 #include <assert.h>
@@ -215,6 +215,6 @@ int main(void)
     movebridge_close();
     close(camera);
     close(receiver);
-    puts("Porpoise Move calibrated UDP packet checks passed");
+    puts("Move calibrated UDP packet checks passed");
     return 0;
 }

@@ -4,7 +4,7 @@ Read README.md, STATUS.md and PROTOCOL.md in this directory first. These are eng
 
 ## Scope
 
-Work on the standalone Move Management project. Porpoise is a reference/integration target; do not edit or rebuild the Porpoise app unless the user explicitly requests that work. Preserve legacy state paths and internal identifiers during the visible rename.
+Work on the standalone Move Management project. Do not edit or rebuild another application unless explicitly requested. Keep the public integration boundary generic, and preserve established runtime paths for compatibility.
 
 ## Priorities
 
@@ -39,4 +39,4 @@ Work on the standalone Move Management project. Porpoise is a reference/integrat
 
 Windows writes can produce CRLF; shell scripts need LF. WSL inherits cwd. JSON quoting is not shell escaping. Old diagnostic logs and earlier documentation may be stale. Vibration in an older diagnostic does not establish the current standalone feedback receiver (currently missing). Eight software slots are not eight verified physical links.
 
-The separate Porpoise fork has an opt-in build flag/runtime marker and wire/backend tests. Do not copy it wholesale into RPCS3: adapt host input and guest HLE semantics independently.
+Use the application-independent protocol and reference client. Adapt input to the target software; an emulator must independently implement guest-device semantics.

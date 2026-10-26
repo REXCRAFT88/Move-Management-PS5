@@ -1,4 +1,4 @@
-#include "porpoise_nav.h"
+#include "nav_bridge.h"
 
 #include <arpa/inet.h>
 #include <assert.h>
@@ -103,6 +103,6 @@ int main(void)
     assert(get_le64(packet + 8) == 3);
     assert(get_le32(packet + 24) == 0);
     close(receiver);
-    puts("Porpoise Navigation UDP packet checks passed");
+    puts("Navigation UDP packet checks passed");
     return 0;
 }

@@ -1,7 +1,7 @@
 #if defined(__linux__) && !defined(_POSIX_C_SOURCE)
 #define _POSIX_C_SOURCE 200809L
 #endif
-#include "porpoise_nav.h"
+#include "nav_bridge.h"
 
 #include <arpa/inet.h>
 #include <netinet/in.h>

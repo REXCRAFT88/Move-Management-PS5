@@ -15,11 +15,11 @@ Edit web/index.html; src/web_page.c is generated. Do not bundle private .deps ca
 ## Targeted host tests
 
 ```sh
-make build/test_four_links build/test_players build/test_porpoise_move build/test_porpoise_nav
+make build/test_four_links build/test_players build/test_move_bridge build/test_nav_bridge
 ./build/test_four_links
 ./build/test_players
-./build/test_porpoise_move
-./build/test_porpoise_nav
+./build/test_move_bridge
+./build/test_nav_bridge
 make build/test_studio_web build/test_eye_detector build/test_eye_preview build/test_uvc_camera build/test_mjpeg_stream
 ./build/test_studio_web
 ./build/test_eye_detector

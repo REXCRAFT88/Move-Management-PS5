@@ -34,7 +34,7 @@ Eight physical slots are distinct from four player outputs. Two Moves can be two
 | 176 | u32 | optical valid 0/1 |
 | 180 | u32 | reserved zero |
 
-The reference Porpoise decoder also accepts old v1 input packets of exactly 152 bytes (same header and pad payload, no optics). This producer sends v2.
+The reference decoder also accepts old v1 input packets of exactly 152 bytes (same header and pad payload, no optics). This producer sends v2.
 
 ### Pad payload offsets relative to byte 32
 

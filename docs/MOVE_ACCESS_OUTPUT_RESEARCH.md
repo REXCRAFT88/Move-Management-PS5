@@ -32,7 +32,7 @@ radio read, pairing change or physical-controller test was performed.
    forwarding approach. A PS5 port would need firmware-checked hook locations,
    module lifecycle and error behavior; a PS4 plugin is not a drop-in PS5 payload.
 3. **Emulator integration:** consume Move Management's MVB1 streams directly and
-   implement guest APIs, such as RPCS3 CellGem. This avoids depending on the
+   implement its own input-device APIs. This avoids depending on the
    PS5 shell recognizing a virtual Move, but is not system-wide spoofing.
 
 REMove provides concrete semantics for Open/Close, two controller indices,

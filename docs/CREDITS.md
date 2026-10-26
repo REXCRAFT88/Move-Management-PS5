@@ -8,8 +8,7 @@ Retain actual upstream license files, copyright notices and required correspondi
 | --- | --- |
 | [AnyPad PS5, sinfiltros / elmonomalvad0](https://github.com/sinfiltros/AnyPad-PS5) | Original host, HCI/L2CAP/HID, virtual-pad and payload foundations; GPL-3.0-or-later heritage. Original URL was unavailable during latest audit. |
 | [S-Mohammad-A / AnyPad-PS5-English](https://github.com/S-Mohammad-A/AnyPad-PS5-English) | English source baseline; retain original authorship/license. Fresh source audit: 9475e9f. |
-| [elripalda / Porpoise](https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5) | PS5 host, native input/motion/aim/UI receiving the consumer changes. Retain original CREDITS.md and GPL-3.0-or-later license. |
-| [Dolphin contributors](https://github.com/dolphin-emu/dolphin) | Underlying emulator; Porpoise dependency and notices remain authoritative. |
+| [elripalda / Porpoise](https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5) | Source of incorporated GPL-3.0-or-later aiming fusion, pointer geometry, target workflow and the adapted reference client. Retain original authorship and license notices. No dependency on that application is required. |
 | [libuvc contributors](https://github.com/libuvc/libuvc) | BSD-licensed UVC dependency. Pinned submodule d07de4fa23905ee8cac06f5d24b2a03d42a3b363; see its LICENSE.txt. |
 | [Sean Barrett and stb contributors](https://github.com/nothings/stb) | stb_image JPEG decoder; retain the header's dual MIT/public-domain notice. |
 | [inspirit / PS3EYEDriver](https://github.com/inspirit/PS3EYEDriver) and [Linux gspca/OV534 contributors](https://github.com/torvalds/linux/tree/master/drivers/media/usb/gspca) | Eye registers/init references. Camera header declares GPL-3.0-or-later and notes GPL-2.0-or-later register-table provenance. Audit individual copied tables and preserve notices before redistribution. |
@@ -40,7 +39,6 @@ not only research references. Preserve source and license in distributions.
 - [FAMJAM1/CamRelay](https://github.com/FAMJAM1/CamRelay): Android HTTP framing/source inspection and proposed companion app. No APK bundled or silently installed.
 - [diveshpatil9104/owlmic](https://github.com/diveshpatil9104/owlmic), [Genymobile/scrcpy](https://github.com/Genymobile/scrcpy): phone/USB alternatives researched, not implemented transports.
 - [nekohaku/REMovePS4](https://github.com/nekohaku/REMovePS4), [nefarius/DsHidMini](https://github.com/nefarius/DsHidMini), [opentrack Eye instructions](https://github.com/opentrack/opentrack/wiki/PS3-Eye-open-driver-instructions): user-supplied earlier leads; no complete ports claimed.
-- [RPCS3 contributors](https://github.com/RPCS3/rpcs3): future integration target and CellGem reference, not a shipped RPCS3 patch.
 
 ## Release checklist
 

@@ -1,6 +1,6 @@
 # Current status and evidence
 
-Beta6.11 implements Porpoise-style center/top-left/bottom-right aiming targets,
+Beta6.11 implements center-and-corner center/top-left/bottom-right aiming targets,
 live pointer testing and per-player saved screen profiles. Its fusion/geometry
 and lifecycle pass synthetic tests. This feature is confined to Move Management;
 other applications and native PS5 games do not consume these profiles.
@@ -30,7 +30,7 @@ Newer evidence (2026-10-25): normal camera build beta6.4 and external-only beta6
 | Select recenter | Implemented and user tested | Position consistency and long sessions |
 | Nav USB/wireless | Guided hardware reports and gameplay; protocol tests | LED still blinks; repeated reconnect and multiplayer |
 | Eight physical slots, four players | Eight-link admission, ninth rejection, highest-slot routing and assignment tests | Eight simultaneous internal-radio links not proven |
-| Native DualSense in Porpoise | User confirmed menu inputs | Reconnect fails while bridge runs |
+| Native DualSense in reference application | User confirmed menu inputs | Reconnect fails while bridge runs |
 | PS3 Eye colored spheres | User reported strong tracking; PS5 preview verified | False wall-light detections; eight-color hardware tests |
 | Live preview | PS5 image/bmp endpoint verified | Browser/touch UI QA |
 | UVC backend | Builds; required USB exports verified; Eye fallback works | Real UVC device stream not hardware-tested |
@@ -39,7 +39,6 @@ Newer evidence (2026-10-25): normal camera build beta6.4 and external-only beta6
 | Virtual Move+Nav DualSense | Layout/motion and virtual-pad mock tests | Disabled: native service loading previously stopped payload |
 | Standalone PS5 app tile | Launcher source exists | Installer/service loading failed; no working tile claimed |
 | Vibration | Output-report support and older guided diagnostic evidence; consumer sends MVR1 | Current standalone producer lacks MVR1 receive/timeout path |
-| RPCS3 | Protocol and integration plan | Not implemented or installed |
 
 ## Bluetooth regression record
 

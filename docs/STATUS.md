@@ -15,7 +15,7 @@ Move Management beta6.12, 2026-10-26. Previously named Move Studio. Hardware obs
 
 - Four player outputs, eight physical software slots, identity-based assignments and automatic hand/color selection. Eight-link admission/routing tests are not physical certification.
 - Gyro zeroing and reset: stationary sampling, movement rejection, timeout and disconnection tests pass. User hardware retest pending.
-- Center/top-left/bottom-right aiming wizard: original Porpoise fusion and pointer geometry reused; synthetic targeting, profile save and stale/disconnect tests pass. TV calibration/pointer feel pending. This is confined to Move Management and does not update other apps.
+- Center/top-left/bottom-right aiming wizard: shared fusion and pointer geometry; synthetic targeting, profile save and stale/disconnect tests pass. TV calibration/pointer feel pending. This is confined to Move Management and does not update other apps.
 - Move + Nav virtual DualSense: native client startup and a neutral virtual-device create/bind/feed/remove lifecycle passed. Real controller input, game recognition and multiplayer output remain unverified. Normal builds stay guarded; the explicitly experimental external build exposes the selector with output initially off.
 - UVC/libuvc adapter: native compile and API mock tests pass; real generic UVC stream pending.
 
@@ -28,6 +28,6 @@ Move Management beta6.12, 2026-10-26. Previously named Move Studio. Hardware obs
 - DualShock 3 and PS2 USB converter inputs are research only. Inherited DS4/Xbox/Switch profiles are not hardware-certified in this project.
 - Standalone PS5 app-tile installation is not working. Use an ELF loader and the local website.
 - Current standalone vibration feedback receiving is missing; earlier output-report/diagnostic acceptance does not establish current game rumble.
-- RPCS3 integration is a plan, not a shipped patch. Camera observations are 2D, not validated 6DoF pose; published input quaternion remains identity.
+- Applications need their own input adapter. Camera observations are 2D, not validated 6DoF pose; published input quaternion remains identity.
 
 See [Calibration](CALIBRATION.md), [virtual output beta](VIRTUAL_OUTPUT_BETA.md), [native Bluetooth evidence](NATIVE_BT_RESEARCH.md), [compatibility](ADAPTER_COMPATIBILITY.md), and [historical status](HISTORICAL_STATUS.md). Historical versions and upstream compatibility notes do not override this document.

@@ -7,7 +7,7 @@
 #include "../camera/exclusions.h"
 #endif
 #ifdef ANYPAD_RAW_DIAGNOSTIC
-#include "porpoise_move.h"
+#include "move_bridge.h"
 #endif
 
 #include <sys/socket.h>

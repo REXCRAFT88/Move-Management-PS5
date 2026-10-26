@@ -16,7 +16,6 @@
   "dualshock3_input": "research_only",
   "ps2_usb_converter_input": "research_only",
   "standalone_app_tile": "not_working",
-  "rpcs3_integration": "plan_only",
   "vibration_feedback_receive": "not_implemented",
   "protocol": {
     "input_version": 2,
@@ -43,5 +42,6 @@
     "optical_timeout_ms": 200
   },
   "screen_aiming": "standalone_wizard_preview_and_saved_geometry_synthetic_tests_pass_hardware_pending",
-  "gyro_calibration": "session_zeroing_synthetic_tests_pass_hardware_pending"
+  "gyro_calibration": "session_zeroing_synthetic_tests_pass_hardware_pending",
+  "application_integration": "generic_loopback_protocol_and_reference_client"
 }

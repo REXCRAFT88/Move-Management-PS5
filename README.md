@@ -1,6 +1,6 @@
 # Move Management for PS5
 
-Move Management (formerly Move Studio) is an experimental homebrew payload and local web dashboard for PS Move and Navigation controllers on a jailbroken PS5. It manages controller connections, player assignments, motion input, calibration, and camera observations for compatible software. It is a standalone project, not a Porpoise-only tool.
+Move Management (formerly Move Studio) is an experimental homebrew payload and local web dashboard for PS Move and Navigation controllers on a jailbroken PS5. It manages controller connections, player assignments, motion input, calibration, and camera observations for compatible software. It is a standalone input service for PS5 software.
 
 **Current version: beta6.12. Hardware evidence comes from firmware 13.60. This is a development beta, not a finalized compatibility release.**
 
@@ -8,21 +8,21 @@ Move Management (formerly Move Studio) is an experimental homebrew payload and l
 
 | Feature | Current evidence and limits |
 | --- | --- |
-| Move buttons and analog T | Hardware reports and earlier Porpoise gameplay verified. |
+| Move buttons and analog T | Hardware reports and earlier compatible-application gameplay verified. |
 | Wireless Navigation controller | Buttons, stick and L2 verified; reconnection sometimes requires a full controller power cycle or USB setup. |
 | External USB Bluetooth | ASUS adapter tested with Move + Nav while native DualSense reconnect continued working. Other adapters are candidates, not certified. |
 | Automatic USB setup | Plug in Move/Nav, wait for the ready notification, unplug USB, then press PS. Original host backups are retained. |
 | Four players, eight physical software slots | Assignments and routing tested synthetically. Eight simultaneous physical connections are not verified. |
 | Player management | P1–P4 buttons, automatic primary/secondary roles, per-controller disconnect and color selection. |
 | Gyro calibration | Stationary zeroing, progress, movement/timeout rejection and reset; session-only correction. Synthetic tests pass; hardware retest needed. |
-| Screen aiming setup | Porpoise-style center, top-left and bottom-right targets, physical Move-button confirmation, live pointer test and saved per-player geometry. Synthetic tests pass; TV/controller test needed. |
+| Screen aiming setup | center-and-corner center, top-left and bottom-right targets, physical Move-button confirmation, live pointer test and saved per-player geometry. Synthetic tests pass; TV/controller test needed. |
 | PS3 Eye tracking | Live preview, colored-sphere detection and ignored wall-light regions. False positives remain possible. |
 | Phone camera | Local HTTP MJPEG/IP Webcam input, automatic /video path, preview and USB fallback. User has connected a real phone; long-session stability remains under test. |
 | USB UVC camera | libuvc backend builds and mock tests pass. Real generic UVC streaming is not certified. |
 | Move + Nav virtual DualSense | Explicit experimental build; creation/binding/neutral input/removal verified. Real button, game and multiplayer validation is pending. |
 | Native Move / Access controller output | Research only. Export availability is verified, registration/report semantics are not. |
 
-Screen calibration currently affects the Move Management test pointer and saves its own geometry. It does not alter Porpoise, other applications, or native games. An application must explicitly integrate the bridge and any desired calibration profile.
+Screen calibration currently affects the Move Management test pointer and saves its own geometry. It does not alter other applications or native games. An application must explicitly integrate the bridge and any desired calibration profile.
 
 ## Getting started
 
@@ -72,9 +72,9 @@ Start with the [documentation index](docs/README.md), then:
 - [Architecture](docs/ARCHITECTURE.md), [input protocol](docs/PROTOCOL.md), [HTTP API](docs/HTTP_API.md)
 - [Calibration](docs/CALIBRATION.md), [automatic USB setup](docs/AUTOMATIC_USB_SETUP.md), [session policy](docs/USB_SESSION_POLICY.md)
 - [Adapter compatibility](docs/ADAPTER_COMPATIBILITY.md), [native Bluetooth findings](docs/NATIVE_BT_RESEARCH.md)
-- [Integration guidance](docs/INTEGRATION.md), [RPCS3 plan](docs/RPCS3.md), [Move/Access research](docs/MOVE_ACCESS_OUTPUT_RESEARCH.md)
+- [Integration guidance](docs/INTEGRATION.md), [Move/Access research](docs/MOVE_ACCESS_OUTPUT_RESEARCH.md)
 
-The RPCS3 integration is a plan, not a shipped patch. Historical documents mention earlier Move Studio/AnyPad builds; they are not current certification. Existing `/data/move-studio` paths, legacy internal identifiers and `X-AnyPad` header are retained for compatibility with existing installations.
+Historical documents mention earlier Move Studio/AnyPad builds; they are not current certification. Existing `/data/move-studio` paths, legacy internal identifiers and `X-AnyPad` header are retained for compatibility with existing installations.
 
 ## Sources and credits
 

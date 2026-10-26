@@ -21,6 +21,12 @@ $(BUILD)/test_aim_setup: tests/test_aim_setup.cpp src/aim_setup.cpp src/aim_setu
 
 all: test
 
+$(BUILD)/test_bridge_producer.o: src/move_bridge.c src/move_bridge.h | $(BUILD)
+	$(CC) $(HOST_CFLAGS) -c src/move_bridge.c -o $@
+
+$(BUILD)/test_bridge_consumer: tests/test_bridge_consumer.cpp integrations/move_management_client.hpp $(BUILD)/test_bridge_producer.o | $(BUILD)
+	$(CXX) -std=c++17 -Wall -Wextra -Werror -Wno-missing-field-initializers -O2 tests/test_bridge_consumer.cpp $(BUILD)/test_bridge_producer.o -o $@ -lm
+
 $(BUILD)/test_hci_external: src/hci_external.c src/evstream.c src/log.c src/util.c tests/test_hci_external.c tests/mocks/libusb.h | $(BUILD)
 	$(CC) $(HOST_CFLAGS) -Wno-misleading-indentation -DEXTERNAL_BT_TEST -Itests/mocks -o $@ src/hci_external.c src/evstream.c src/log.c src/util.c tests/test_hci_external.c -ldl
 
@@ -123,10 +129,10 @@ $(BUILD)/test_usb_nav_seed: $(CORE) tests/sim.c tests/test_usb_nav_seed.c | $(BU
 $(BUILD)/test_usb_move_seed: $(CORE) tests/sim.c tests/test_usb_move_seed.c | $(BUILD)
 	cc $(HOST_CFLAGS) -o $@ $^
 
-$(BUILD)/test_porpoise_move: src/porpoise_move.c tests/test_porpoise_move.c | $(BUILD)
+$(BUILD)/test_move_bridge: src/move_bridge.c tests/test_move_bridge.c | $(BUILD)
 	cc $(HOST_CFLAGS) -o $@ $^ -lm
 
-$(BUILD)/test_porpoise_nav: src/porpoise_nav.c tests/test_porpoise_nav.c | $(BUILD)
+$(BUILD)/test_nav_bridge: src/nav_bridge.c tests/test_nav_bridge.c | $(BUILD)
 	cc $(HOST_CFLAGS) -o $@ $^
 
 $(BUILD)/test_move_config: src/move_config.c tests/test_move_config.c | $(BUILD)

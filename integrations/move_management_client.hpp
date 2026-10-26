@@ -1,4 +1,5 @@
-/* Porpoise Move UDP bridge input. SPDX-License-Identifier: GPL-3.0-or-later
+/* Move Management validated UDP input client. Source credits: docs/CREDITS.md.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 #pragma once
 
@@ -21,7 +22,7 @@
 #include <fcntl.h>
 #endif
 
-namespace porpoise::move_bridge {
+namespace move_management {
 
 #if defined(_WIN32)
 using SocketHandle = SOCKET;
@@ -246,4 +247,4 @@ private:
     bool winsock_started_ = false;
 #endif
 };
-} // namespace porpoise::move_bridge
+} // namespace move_management

@@ -10,7 +10,7 @@ flowchart LR
   Phone[Phone MJPEG app] --> Camera
   Camera --> Optical[Loopback observations UDP 9990]
   Optical --> Routing
-  Routing --> Consumer[Porpoise / future RPCS3 consumer]
+  Routing --> Consumer[PS5 game / emulator / application input adapter]
   Camera --> Preview[Loopback BMP UDP 9991]
   Preview --> Dashboard[HTTP dashboard 8095]
   Routing --> Dashboard
@@ -27,8 +27,8 @@ The raw HCI host currently interferes with Sony-native reconnection. PoorDS4's n
 | src/profiles.c | Move/Nav input and output report formats |
 | src/players.c | Persistent identities, assignments and offline role release |
 | src/usb_register.c | USB identity/calibration, Nav host backup/readback, notifications |
-| src/porpoise_move.c | Calibrated Move publication and attached optics |
-| src/porpoise_nav.c | Four Nav output channels |
+| src/move_bridge.c | Calibrated Move publication and attached optics |
+| src/nav_bridge.c | Four Nav output channels |
 | src/move_config.c | Proposed virtual layouts and motion-to-stick mapping |
 | src/ps5_vpad.c | Guarded virtual-pad backend; native startup stage logging |
 | src/web.c, web/index.html | API and embedded UI; src/web_page.c is generated |
@@ -43,8 +43,6 @@ These are path descriptions, not permission to publish a user's files.
 
 - `/data/move-studio/`: bridge.log, bridge.pid, players.ini, layouts.ini, usb-registration.log, camera.json, phone-camera.url, camera-exclusions.ini.
 - `/data/anypad-move-nav/`: anypad.lock, pads.db, per-identity calibration, Nav identity/original-host backups and local-address.bin.
-- `/data/porpoise-eye-optical.log`, `/data/porpoise-eye-optical.stop`: camera log and coordinated stop.
-- `/data/porpoise-move-bridge.enable`: opt-in Porpoise consumer marker.
 - `/data/move-studio/enable-experimental-virtual`: guarded compatibility experiment; absent in normal operation.
 
 Registration is not connection. Offline records retain a preferred player but release live hand roles. Physical slots can be reused by different identities. Use address-based dashboard operations and explicit connection generations/freshness in consumers.

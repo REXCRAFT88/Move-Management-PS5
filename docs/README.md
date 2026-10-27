@@ -4,6 +4,9 @@ This is the integration entry point for emulator, game, application and AI-assis
 
 Read in this order:
 
+For phone-camera users, start with [Phone camera setup](PHONE_CAMERA_SETUP.md).
+For proposed additional hardware, see [PS4 Camera and ZCM2 research](PS4_HARDWARE.md).
+
 1. [Current status and evidence](STATUS.md).
 2. [Architecture](ARCHITECTURE.md).
 3. [Wire protocol](PROTOCOL.md).

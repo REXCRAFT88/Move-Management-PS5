@@ -4,6 +4,12 @@ Move Management (formerly Move Studio) is an experimental homebrew payload and l
 
 **Current version: beta6.12. Hardware evidence comes from firmware 13.60. This is a development beta, not a finalized compatibility release.**
 
+[Download the beta payloads](https://github.com/REXCRAFT88/Move-Management-PS5/releases/tag/v0.1.0-beta6.12) · [Phone camera setup](docs/PHONE_CAMERA_SETUP.md)
+
+Phone input is included in the separate camera payload. Load one main ELF plus
+`MoveManagement-Camera.elf`, then enter the local phone-camera address in Camera
+tracking. PS4 Camera and newer ZCM2 Move support are [planned, not included](docs/PS4_HARDWARE.md).
+
 ## Features and status
 
 | Feature | Current evidence and limits |

@@ -27,6 +27,8 @@ not only research references. Preserve source and license in distributions.
 
 ## Other research references
 
+- [bigboss-ps3dev/PS4EYECam](https://github.com/bigboss-ps3dev/PS4EYECam), [ps4eye/ps4eye](https://github.com/ps4eye/ps4eye), and [psmoveapi camera documentation](https://psmoveapi.readthedocs.io/en/latest/camera.html): PS4 camera initialization, USB 3/UVC and format research. No driver port or firmware is included; see PS4_HARDWARE.md. The existing psmoveapi credit also covers the ZCM2 report/calibration research.
+
 - [johnhenry/ps-access](https://github.com/johnhenry/ps-access): real Access controller USB identity, profiles and physical input documentation; credits Jacek Fedorynski's earlier editor. Research only, no Access output implemented.
 - [FGGstore/FGG-XSense](https://github.com/FGGstore/FGG-XSense) and [srbraboo/Ghostpad](https://github.com/srbraboo/Ghostpad): alternative virtual-device registration/report and assignment research. No code copied or shell patches installed; revisions and limits in MOVE_ACCESS_OUTPUT_RESEARCH.md.
 
